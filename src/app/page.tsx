@@ -27,12 +27,17 @@ export default function Home() {
 			<section className="relative w-full py-20 md:py-32 lg:py-40 overflow-hidden">
 				{/* Animated Background Gradient */}
 				<div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 animate-gradient" />
-				<div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+				<div className="absolute inset-0 grid-pattern" />
 
-				<div className="container px-4 md:px-6 relative">
+				{/* Floating Decorative Elements */}
+				<div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />
+				<div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}} />
+				<div className="absolute top-40 right-20 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}} />
+
+				<div className="container px-4 md:px-6 relative z-10">
 					<div className="flex flex-col items-center space-y-8 text-center">
-						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
-							<Sparkles className="w-4 h-4 mr-2" />
+						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white shadow-lg hover:shadow-xl transition-shadow animate-pulse-glow">
+							<Sparkles className="w-4 h-4 mr-2 animate-spin-slow" />
 							Agencia Digital Premium
 						</Badge>
 
@@ -51,13 +56,13 @@ export default function Home() {
 						</div>
 
 						<div className="flex flex-col sm:flex-row gap-4">
-							<Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all text-white">
+							<Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-white group">
 								<Link href="/contacto">
 									Comenzar Proyecto
-									<ArrowRight className="ml-2 h-5 w-5" />
+									<ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
 								</Link>
 							</Button>
-							<Button asChild variant="outline" size="lg" className="border-2 hover:bg-muted">
+							<Button asChild variant="outline" size="lg" className="border-2 hover:bg-muted hover:scale-105 transition-all duration-300">
 								<Link href="/portafolio">Ver Portafolio</Link>
 							</Button>
 						</div>
@@ -149,9 +154,10 @@ export default function Home() {
 					</div>
 
 					<div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
-						<Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-500/50">
-							<CardHeader>
-								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 mb-4 group-hover:scale-110 transition-transform">
+						<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-blue-500/50 hover:-translate-y-2 relative overflow-hidden">
+							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+							<CardHeader className="relative">
+								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
 									<Code2 className="h-8 w-8 text-white" />
 								</div>
 								<CardTitle className="text-2xl">Desarrollo Web</CardTitle>
@@ -182,9 +188,10 @@ export default function Home() {
 							</CardContent>
 						</Card>
 
-						<Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-purple-500/50">
-							<CardHeader>
-								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 mb-4 group-hover:scale-110 transition-transform">
+						<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-purple-500/50 hover:-translate-y-2 relative overflow-hidden">
+							<div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+							<CardHeader className="relative">
+								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
 									<Palette className="h-8 w-8 text-white" />
 								</div>
 								<CardTitle className="text-2xl">Diseño UX/UI</CardTitle>
@@ -215,9 +222,10 @@ export default function Home() {
 							</CardContent>
 						</Card>
 
-						<Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-pink-500/50">
-							<CardHeader>
-								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 mb-4 group-hover:scale-110 transition-transform">
+						<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-pink-500/50 hover:-translate-y-2 relative overflow-hidden">
+							<div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+							<CardHeader className="relative">
+								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
 									<Rocket className="h-8 w-8 text-white" />
 								</div>
 								<CardTitle className="text-2xl">Consultoría Digital</CardTitle>
@@ -268,13 +276,14 @@ export default function Home() {
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300">
+						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-blue-500/30">
 							<div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-700 relative overflow-hidden">
-								<div className="absolute inset-0 flex items-center justify-center">
-									<Globe className="w-20 h-20 text-white/20" />
+								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+									<Globe className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
 								</div>
+								<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 								<div className="absolute top-4 left-4">
-									<Badge className="bg-white/90 text-blue-700">E-commerce</Badge>
+									<Badge className="bg-white/90 text-blue-700 backdrop-blur shadow-lg">E-commerce</Badge>
 								</div>
 							</div>
 							<CardHeader>
@@ -286,13 +295,14 @@ export default function Home() {
 							</CardHeader>
 						</Card>
 
-						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300">
+						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-purple-500/30">
 							<div className="aspect-video bg-gradient-to-br from-purple-500 to-purple-700 relative overflow-hidden">
-								<div className="absolute inset-0 flex items-center justify-center">
-									<Smartphone className="w-20 h-20 text-white/20" />
+								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+									<Smartphone className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
 								</div>
+								<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 								<div className="absolute top-4 left-4">
-									<Badge className="bg-white/90 text-purple-700">SaaS</Badge>
+									<Badge className="bg-white/90 text-purple-700 backdrop-blur shadow-lg">SaaS</Badge>
 								</div>
 							</div>
 							<CardHeader>
@@ -304,13 +314,14 @@ export default function Home() {
 							</CardHeader>
 						</Card>
 
-						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300">
+						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-pink-500/30">
 							<div className="aspect-video bg-gradient-to-br from-pink-500 to-pink-700 relative overflow-hidden">
-								<div className="absolute inset-0 flex items-center justify-center">
-									<Rocket className="w-20 h-20 text-white/20" />
+								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+									<Rocket className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
 								</div>
+								<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 								<div className="absolute top-4 left-4">
-									<Badge className="bg-white/90 text-pink-700">Startup</Badge>
+									<Badge className="bg-white/90 text-pink-700 backdrop-blur shadow-lg">Startup</Badge>
 								</div>
 							</div>
 							<CardHeader>
@@ -350,10 +361,11 @@ export default function Home() {
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-						<Card className="border-2">
-							<CardHeader>
+						<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-blue-500/30 relative overflow-hidden group">
+							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+							<CardHeader className="relative">
 								<div className="flex items-center gap-4">
-									<Avatar className="w-12 h-12">
+									<Avatar className="w-12 h-12 ring-2 ring-blue-500/20 group-hover:ring-blue-500/50 transition-all">
 										<AvatarImage src="/avatars/01.png" />
 										<AvatarFallback className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
 											MC
