@@ -44,7 +44,7 @@ export function Navbar() {
 
 				{/* CTA Button - Desktop */}
 				<div className="hidden md:flex items-center space-x-4">
-					<Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+					<Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
 						<Link href="/contacto">Contratar</Link>
 					</Button>
 				</div>
@@ -75,7 +75,7 @@ export function Navbar() {
 							</Link>
 						))}
 						<div className="pt-2">
-							<Button asChild className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+							<Button asChild className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
 								<Link href="/contacto">Contratar</Link>
 							</Button>
 						</div>

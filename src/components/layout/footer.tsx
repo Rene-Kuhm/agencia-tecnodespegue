@@ -43,7 +43,7 @@ export function Footer() {
 							required
 							className="flex-1"
 						/>
-						<Button type="submit" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+						<Button type="submit" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
 							<Mail className="w-4 h-4 mr-2" />
 							Suscribirse
 						</Button>
