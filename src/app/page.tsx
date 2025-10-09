@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Newsletter } from "@/components/sections/newsletter"
+import { ScrollReveal } from "@/components/effects/scroll-reveal"
 import {
 	ArrowRight,
 	Code2,
@@ -89,8 +90,9 @@ export default function Home() {
 			{/* Stats Section */}
 			<section className="w-full py-12 md:py-20 bg-muted/50 border-y">
 				<div className="container px-4 md:px-6">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-						<div className="flex flex-col items-center text-center space-y-2">
+					<ScrollReveal direction="fade" delay={100}>
+						<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+							<div className="flex flex-col items-center text-center space-y-2">
 							<div className="p-2 sm:p-3 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mb-2">
 								<Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
 							</div>
@@ -133,28 +135,32 @@ export default function Home() {
 								Tasa de Satisfacción
 							</p>
 						</div>
-					</div>
+						</div>
+					</ScrollReveal>
 				</div>
 			</section>
 
 			{/* Services Section */}
 			<section className="w-full py-16 md:py-24 lg:py-32">
 				<div className="container px-4 md:px-6">
-					<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-						<Badge variant="outline" className="px-4 py-1.5">
-							Servicios Premium
-						</Badge>
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-							Soluciones Integrales
-						</h2>
-						<p className="max-w-[900px] text-muted-foreground md:text-xl">
-							Ofrecemos un ecosistema completo de servicios digitales para
-							impulsar tu negocio
-						</p>
-					</div>
+					<ScrollReveal direction="up" delay={100}>
+						<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+							<Badge variant="outline" className="px-4 py-1.5">
+								Servicios Premium
+							</Badge>
+							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+								Soluciones Integrales
+							</h2>
+							<p className="max-w-[900px] text-muted-foreground md:text-xl">
+								Ofrecemos un ecosistema completo de servicios digitales para
+								impulsar tu negocio
+							</p>
+						</div>
+					</ScrollReveal>
 
 					<div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
-						<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-blue-500/50 hover:-translate-y-2 relative overflow-hidden">
+						<ScrollReveal direction="up" delay={200}>
+							<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-blue-500/50 hover:-translate-y-2 relative overflow-hidden">
 							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 							<CardHeader className="relative">
 								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
@@ -186,9 +192,11 @@ export default function Home() {
 									</li>
 								</ul>
 							</CardContent>
-						</Card>
+							</Card>
+						</ScrollReveal>
 
-						<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-purple-500/50 hover:-translate-y-2 relative overflow-hidden">
+						<ScrollReveal direction="up" delay={300}>
+							<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-purple-500/50 hover:-translate-y-2 relative overflow-hidden">
 							<div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 							<CardHeader className="relative">
 								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
@@ -220,9 +228,11 @@ export default function Home() {
 									</li>
 								</ul>
 							</CardContent>
-						</Card>
+							</Card>
+						</ScrollReveal>
 
-						<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-pink-500/50 hover:-translate-y-2 relative overflow-hidden">
+						<ScrollReveal direction="up" delay={400}>
+							<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-pink-500/50 hover:-translate-y-2 relative overflow-hidden">
 							<div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 							<CardHeader className="relative">
 								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
@@ -254,7 +264,8 @@ export default function Home() {
 									</li>
 								</ul>
 							</CardContent>
-						</Card>
+							</Card>
+						</ScrollReveal>
 					</div>
 				</div>
 			</section>
@@ -262,21 +273,24 @@ export default function Home() {
 			{/* Portfolio Preview Section */}
 			<section className="w-full py-16 md:py-24 lg:py-32 bg-muted/50">
 				<div className="container px-4 md:px-6">
-					<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-						<Badge variant="outline" className="px-4 py-1.5">
-							Nuestro Trabajo
-						</Badge>
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-							Proyectos Destacados
-						</h2>
-						<p className="max-w-[900px] text-muted-foreground md:text-xl">
-							Algunos de los proyectos que hemos desarrollado para nuestros
-							clientes
-						</p>
-					</div>
+					<ScrollReveal direction="up" delay={100}>
+						<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+							<Badge variant="outline" className="px-4 py-1.5">
+								Nuestro Trabajo
+							</Badge>
+							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+								Proyectos Destacados
+							</h2>
+							<p className="max-w-[900px] text-muted-foreground md:text-xl">
+								Algunos de los proyectos que hemos desarrollado para nuestros
+								clientes
+							</p>
+						</div>
+					</ScrollReveal>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-blue-500/30">
+						<ScrollReveal direction="up" delay={200}>
+							<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-blue-500/30">
 							<div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-700 relative overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
 									<Globe className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
@@ -293,9 +307,11 @@ export default function Home() {
 									pagos integrados
 								</CardDescription>
 							</CardHeader>
-						</Card>
+							</Card>
+						</ScrollReveal>
 
-						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-purple-500/30">
+						<ScrollReveal direction="up" delay={300}>
+							<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-purple-500/30">
 							<div className="aspect-video bg-gradient-to-br from-purple-500 to-purple-700 relative overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
 									<Smartphone className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
@@ -312,9 +328,11 @@ export default function Home() {
 									tiempo real
 								</CardDescription>
 							</CardHeader>
-						</Card>
+							</Card>
+						</ScrollReveal>
 
-						<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-pink-500/30">
+						<ScrollReveal direction="up" delay={400}>
+							<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-pink-500/30">
 							<div className="aspect-video bg-gradient-to-br from-pink-500 to-pink-700 relative overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
 									<Rocket className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
@@ -331,37 +349,43 @@ export default function Home() {
 									comunidad activa
 								</CardDescription>
 							</CardHeader>
-						</Card>
+							</Card>
+						</ScrollReveal>
 					</div>
 
-					<div className="flex justify-center mt-10">
+					<ScrollReveal direction="up" delay={500}>
+						<div className="flex justify-center mt-10">
 						<Button asChild size="lg" variant="outline" className="border-2">
 							<Link href="/portafolio">
 								Ver Todos los Proyectos
 								<ArrowRight className="ml-2 h-4 w-4" />
 							</Link>
 						</Button>
-					</div>
+						</div>
+					</ScrollReveal>
 				</div>
 			</section>
 
 			{/* Testimonials Section */}
 			<section className="w-full py-16 md:py-24 lg:py-32">
 				<div className="container px-4 md:px-6">
-					<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-						<Badge variant="outline" className="px-4 py-1.5">
-							Testimonios
-						</Badge>
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-							Lo que Dicen Nuestros Clientes
-						</h2>
-						<p className="max-w-[900px] text-muted-foreground md:text-xl">
-							La satisfacción de nuestros clientes es nuestra mayor recompensa
-						</p>
-					</div>
+					<ScrollReveal direction="up" delay={100}>
+						<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+							<Badge variant="outline" className="px-4 py-1.5">
+								Testimonios
+							</Badge>
+							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+								Lo que Dicen Nuestros Clientes
+							</h2>
+							<p className="max-w-[900px] text-muted-foreground md:text-xl">
+								La satisfacción de nuestros clientes es nuestra mayor recompensa
+							</p>
+						</div>
+					</ScrollReveal>
 
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-						<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-blue-500/30 relative overflow-hidden group">
+						<ScrollReveal direction="left" delay={200}>
+							<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-blue-500/30 relative overflow-hidden group">
 							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 							<CardHeader className="relative">
 								<div className="flex items-center gap-4">
@@ -392,74 +416,81 @@ export default function Home() {
 									responde rápidamente.&rdquo;
 								</p>
 							</CardContent>
-						</Card>
+							</Card>
+						</ScrollReveal>
 
-						<Card className="border-2">
-							<CardHeader>
-								<div className="flex items-center gap-4">
-									<Avatar className="w-12 h-12">
-										<AvatarImage src="/avatars/02.png" />
-										<AvatarFallback className="bg-gradient-to-br from-purple-500 to-purple-600 text-white">
-											JR
-										</AvatarFallback>
-									</Avatar>
-									<div>
-										<p className="font-semibold">Juan Rodríguez</p>
-										<p className="text-sm text-muted-foreground">
-											Founder, eShop
-										</p>
+						<ScrollReveal direction="up" delay={300}>
+							<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-purple-500/30 relative overflow-hidden group">
+								<div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+								<CardHeader className="relative">
+									<div className="flex items-center gap-4">
+										<Avatar className="w-12 h-12 ring-2 ring-purple-500/20 group-hover:ring-purple-500/50 transition-all">
+											<AvatarImage src="/avatars/02.png" />
+											<AvatarFallback className="bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+												JR
+											</AvatarFallback>
+										</Avatar>
+										<div>
+											<p className="font-semibold">Juan Rodríguez</p>
+											<p className="text-sm text-muted-foreground">
+												Founder, eShop
+											</p>
+										</div>
 									</div>
-								</div>
-							</CardHeader>
-							<CardContent>
-								<div className="flex gap-1 mb-3">
-									{[...Array(5)].map((_, i) => (
-										<Star
-											key={i}
-											className="w-4 h-4 fill-yellow-400 text-yellow-400"
-										/>
-									))}
-								</div>
-								<p className="text-sm text-muted-foreground">
-									&ldquo;Nuestra tienda online ha triplicado sus ventas desde
-									que trabajamos con TecnoDespegue. Altamente
-									recomendados.&rdquo;
-								</p>
-							</CardContent>
-						</Card>
+								</CardHeader>
+								<CardContent className="relative">
+									<div className="flex gap-1 mb-3">
+										{[...Array(5)].map((_, i) => (
+											<Star
+												key={i}
+												className="w-4 h-4 fill-yellow-400 text-yellow-400"
+											/>
+										))}
+									</div>
+									<p className="text-sm text-muted-foreground">
+										&ldquo;Nuestra tienda online ha triplicado sus ventas desde
+										que trabajamos con TecnoDespegue. Altamente
+										recomendados.&rdquo;
+									</p>
+								</CardContent>
+							</Card>
+						</ScrollReveal>
 
-						<Card className="border-2">
-							<CardHeader>
-								<div className="flex items-center gap-4">
-									<Avatar className="w-12 h-12">
-										<AvatarImage src="/avatars/03.png" />
-										<AvatarFallback className="bg-gradient-to-br from-pink-500 to-pink-600 text-white">
-											AS
-										</AvatarFallback>
-									</Avatar>
-									<div>
-										<p className="font-semibold">Ana Sánchez</p>
-										<p className="text-sm text-muted-foreground">
-											Director, FitLife
-										</p>
+						<ScrollReveal direction="right" delay={400}>
+							<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-pink-500/30 relative overflow-hidden group">
+								<div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+								<CardHeader className="relative">
+									<div className="flex items-center gap-4">
+										<Avatar className="w-12 h-12 ring-2 ring-pink-500/20 group-hover:ring-pink-500/50 transition-all">
+											<AvatarImage src="/avatars/03.png" />
+											<AvatarFallback className="bg-gradient-to-br from-pink-500 to-pink-600 text-white">
+												AS
+											</AvatarFallback>
+										</Avatar>
+										<div>
+											<p className="font-semibold">Ana Sánchez</p>
+											<p className="text-sm text-muted-foreground">
+												Director, FitLife
+											</p>
+										</div>
 									</div>
-								</div>
-							</CardHeader>
-							<CardContent>
-								<div className="flex gap-1 mb-3">
-									{[...Array(5)].map((_, i) => (
-										<Star
-											key={i}
-											className="w-4 h-4 fill-yellow-400 text-yellow-400"
-										/>
-									))}
-								</div>
-								<p className="text-sm text-muted-foreground">
-									&ldquo;La app que desarrollaron es increíble. Nuestros usuarios
-									están encantados con la experiencia y facilidad de uso.&rdquo;
-								</p>
-							</CardContent>
-						</Card>
+								</CardHeader>
+								<CardContent className="relative">
+									<div className="flex gap-1 mb-3">
+										{[...Array(5)].map((_, i) => (
+											<Star
+												key={i}
+												className="w-4 h-4 fill-yellow-400 text-yellow-400"
+											/>
+										))}
+									</div>
+									<p className="text-sm text-muted-foreground">
+										&ldquo;La app que desarrollaron es increíble. Nuestros usuarios
+										están encantados con la experiencia y facilidad de uso.&rdquo;
+									</p>
+								</CardContent>
+							</Card>
+						</ScrollReveal>
 					</div>
 				</div>
 			</section>
