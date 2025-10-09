@@ -116,7 +116,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    cursor: none !important; /* Hide default cursor for custom cursor */
   }
   body {
     @apply bg-background text-foreground;
