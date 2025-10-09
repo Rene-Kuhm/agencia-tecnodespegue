@@ -77,7 +77,7 @@ export default function ContactoPage() {
 
 				<div className="container px-4 md:px-6 relative">
 					<div className="flex flex-col items-center space-y-6 text-center max-w-4xl mx-auto">
-						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0">
+						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
 							<Sparkles className="w-4 h-4 mr-2" />
 							Hablemos
 						</Badge>
@@ -305,7 +305,7 @@ export default function ContactoPage() {
 									type="submit"
 									size="lg"
 									disabled={isLoading}
-									className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg"
+									className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg text-white"
 								>
 									{isLoading ? (
 										<>

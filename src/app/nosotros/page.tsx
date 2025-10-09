@@ -127,7 +127,7 @@ export default function NosotrosPage() {
 
 				<div className="container px-4 md:px-6 relative">
 					<div className="flex flex-col items-center space-y-6 text-center max-w-4xl mx-auto">
-						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0">
+						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
 							<Sparkles className="w-4 h-4 mr-2" />
 							Sobre Nosotros
 						</Badge>

@@ -69,7 +69,7 @@ export function Newsletter() {
 									type="submit"
 									size="lg"
 									disabled={isLoading}
-									className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 h-12 px-8"
+									className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 h-12 px-8 text-white"
 								>
 									{isLoading ? "Suscribiendo..." : "Suscribirse"}
 								</Button>

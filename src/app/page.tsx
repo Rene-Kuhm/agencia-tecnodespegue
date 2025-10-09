@@ -31,7 +31,7 @@ export default function Home() {
 
 				<div className="container px-4 md:px-6 relative">
 					<div className="flex flex-col items-center space-y-8 text-center">
-						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0">
+						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
 							<Sparkles className="w-4 h-4 mr-2" />
 							Agencia Digital Premium
 						</Badge>
@@ -51,7 +51,7 @@ export default function Home() {
 						</div>
 
 						<div className="flex flex-col sm:flex-row gap-4">
-							<Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all">
+							<Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all text-white">
 								<Link href="/contacto">
 									Comenzar Proyecto
 									<ArrowRight className="ml-2 h-5 w-5" />

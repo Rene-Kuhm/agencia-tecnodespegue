@@ -42,7 +42,7 @@ export default function ServiciosPage() {
 
 				<div className="container px-4 md:px-6 relative">
 					<div className="flex flex-col items-center space-y-6 text-center max-w-4xl mx-auto">
-						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0">
+						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
 							<Zap className="w-4 h-4 mr-2" />
 							Servicios Premium
 						</Badge>
@@ -63,7 +63,7 @@ export default function ServiciosPage() {
 						<Button
 							asChild
 							size="lg"
-							className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg"
+							className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg text-white"
 						>
 							<Link href="/contacto">
 								Solicitar Consulta Gratis
