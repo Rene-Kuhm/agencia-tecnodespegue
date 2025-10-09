@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agencia TecnoDespegue
 
-## Getting Started
+Sitio web corporativo de Agencia TecnoDespegue, construido con las tecnologías más modernas.
 
-First, run the development server:
+## Stack Tecnológico
+
+- **Framework**: Next.js 15 (App Router)
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS v4
+- **Componentes UI**: shadcn/ui
+- **Linter/Formatter**: Biome
+- **Bundler**: Turbopack
+
+## Características
+
+- ⚡ Next.js 15 con App Router y Server Components
+- 🎨 Tailwind CSS v4 con configuración optimizada
+- 🧩 Componentes reutilizables con shadcn/ui
+- 📱 Diseño responsive y mobile-first
+- 🌙 Modo oscuro incluido
+- ⚙️ TypeScript para type safety
+- 🚀 Optimizado con Turbopack
+- 🔍 Biome para linting y formateo rápido
+
+## Estructura del Proyecto
+
+```
+src/
+├── app/                 # Rutas de la aplicación (App Router)
+│   ├── contacto/       # Página de contacto
+│   ├── nosotros/       # Página sobre nosotros
+│   ├── portafolio/     # Página de portafolio
+│   ├── servicios/      # Página de servicios
+│   ├── layout.tsx      # Layout principal
+│   ├── page.tsx        # Página de inicio
+│   └── globals.css     # Estilos globales
+├── components/         # Componentes React
+│   ├── ui/            # Componentes de shadcn/ui
+│   ├── layout/        # Componentes de layout
+│   └── sections/      # Secciones de páginas
+├── lib/               # Utilidades y helpers
+├── hooks/             # Custom React hooks
+├── types/             # Definiciones de tipos TypeScript
+└── constants/         # Constantes de la aplicación
+```
+
+## Comandos Disponibles
+
+```bash
+# Desarrollo
+npm run dev          # Inicia el servidor de desarrollo con Turbopack
+
+# Producción
+npm run build        # Construye la aplicación para producción
+npm run start        # Inicia el servidor de producción
+
+# Code Quality
+npm run lint         # Ejecuta Biome para verificar el código
+npm run lint:fix     # Ejecuta Biome y corrige automáticamente
+npm run format       # Formatea el código con Biome
+npm run check        # Ejecuta lint + fix + verificación de tipos
+npm run type-check   # Verifica tipos de TypeScript
+```
+
+## Instalación
+
+1. Clona el repositorio
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Inicia el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts de Desarrollo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `dev`: Inicia el servidor de desarrollo con Turbopack (hot reload)
+- `build`: Construye la aplicación optimizada para producción
+- `start`: Inicia el servidor de producción
+- `lint`: Analiza el código con Biome
+- `lint:fix`: Analiza y corrige automáticamente problemas
+- `format`: Formatea todo el código
+- `check`: Ejecuta todos los checks (lint + tipos)
 
-## Learn More
+## Tecnologías Adicionales
 
-To learn more about Next.js, take a look at the following resources:
+- **React 19**: Última versión de React
+- **CSS Variables**: Para theming personalizable
+- **OKLCH Colors**: Sistema de colores moderno
+- **clsx & tailwind-merge**: Para composición de clases optimizada
+- **Lucide Icons**: Iconos modernos y ligeros
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuración de Biome
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+El proyecto usa Biome en lugar de ESLint + Prettier para mejor rendimiento:
 
-## Deploy on Vercel
+- Formateo automático de código
+- Linting con reglas recomendadas
+- Organización automática de imports
+- Verificación de tipos integrada
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La aplicación está lista para ser desplegada en:
+
+- **Vercel** (recomendado)
+- **Netlify**
+- **Railway**
+- Cualquier plataforma que soporte Node.js
+
+## Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Licencia
+
+Este proyecto es privado y pertenece a Agencia TecnoDespegue.
