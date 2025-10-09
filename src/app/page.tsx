@@ -92,8 +92,8 @@ export default function Home() {
 				<div className="container px-4 md:px-6">
 					<ScrollReveal direction="fade" delay={100}>
 						<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-							<div className="flex flex-col items-center text-center space-y-2">
-							<div className="p-2 sm:p-3 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mb-2">
+							<div className="flex flex-col items-center text-center space-y-2 neumorphic-card p-6 hover:neumorphic-glow">
+							<div className="neumorphic-icon bg-gradient-to-br from-blue-500 to-blue-600 mb-2">
 								<Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
 							</div>
 							<div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -104,8 +104,8 @@ export default function Home() {
 							</p>
 						</div>
 
-						<div className="flex flex-col items-center text-center space-y-2">
-							<div className="p-2 sm:p-3 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mb-2">
+						<div className="flex flex-col items-center text-center space-y-2 neumorphic-card p-6 hover:neumorphic-glow">
+							<div className="neumorphic-icon bg-gradient-to-br from-purple-500 to-purple-600 mb-2">
 								<Users className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
 							</div>
 							<div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -114,8 +114,8 @@ export default function Home() {
 							<p className="text-xs sm:text-sm text-muted-foreground">Clientes Felices</p>
 						</div>
 
-						<div className="flex flex-col items-center text-center space-y-2">
-							<div className="p-2 sm:p-3 rounded-full bg-gradient-to-br from-pink-500 to-pink-600 mb-2">
+						<div className="flex flex-col items-center text-center space-y-2 neumorphic-card p-6 hover:neumorphic-glow">
+							<div className="neumorphic-icon bg-gradient-to-br from-pink-500 to-pink-600 mb-2">
 								<TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
 							</div>
 							<div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -124,8 +124,8 @@ export default function Home() {
 							<p className="text-xs sm:text-sm text-muted-foreground">Años de Experiencia</p>
 						</div>
 
-						<div className="flex flex-col items-center text-center space-y-2">
-							<div className="p-2 sm:p-3 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 mb-2">
+						<div className="flex flex-col items-center text-center space-y-2 neumorphic-card p-6 hover:neumorphic-glow">
+							<div className="neumorphic-icon bg-gradient-to-br from-orange-500 to-orange-600 mb-2">
 								<Zap className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
 							</div>
 							<div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -160,10 +160,10 @@ export default function Home() {
 
 					<div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
 						<ScrollReveal direction="up" delay={200}>
-							<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-blue-500/50 hover:-translate-y-2 relative overflow-hidden">
+							<Card className="group neumorphic-gradient border-0 relative overflow-hidden">
 							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 							<CardHeader className="relative">
-								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+								<div className="neumorphic-icon bg-gradient-to-br from-blue-500 to-blue-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
 									<Code2 className="h-8 w-8 text-white" />
 								</div>
 								<CardTitle className="text-2xl">Desarrollo Web</CardTitle>
@@ -196,10 +196,10 @@ export default function Home() {
 						</ScrollReveal>
 
 						<ScrollReveal direction="up" delay={300}>
-							<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-purple-500/50 hover:-translate-y-2 relative overflow-hidden">
+							<Card className="group neumorphic-gradient border-0 relative overflow-hidden">
 							<div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 							<CardHeader className="relative">
-								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+								<div className="neumorphic-icon bg-gradient-to-br from-purple-500 to-purple-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
 									<Palette className="h-8 w-8 text-white" />
 								</div>
 								<CardTitle className="text-2xl">Diseño UX/UI</CardTitle>
@@ -232,10 +232,10 @@ export default function Home() {
 						</ScrollReveal>
 
 						<ScrollReveal direction="up" delay={400}>
-							<Card className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-pink-500/50 hover:-translate-y-2 relative overflow-hidden">
+							<Card className="group neumorphic-gradient border-0 relative overflow-hidden">
 							<div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 							<CardHeader className="relative">
-								<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+								<div className="neumorphic-icon bg-gradient-to-br from-pink-500 to-pink-600 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
 									<Rocket className="h-8 w-8 text-white" />
 								</div>
 								<CardTitle className="text-2xl">Consultoría Digital</CardTitle>
@@ -290,7 +290,7 @@ export default function Home() {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 						<ScrollReveal direction="up" delay={200}>
-							<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-blue-500/30">
+							<Card className="group overflow-hidden neumorphic-card border-0">
 							<div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-700 relative overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
 									<Globe className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
@@ -311,7 +311,7 @@ export default function Home() {
 						</ScrollReveal>
 
 						<ScrollReveal direction="up" delay={300}>
-							<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-purple-500/30">
+							<Card className="group overflow-hidden neumorphic-card border-0">
 							<div className="aspect-video bg-gradient-to-br from-purple-500 to-purple-700 relative overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
 									<Smartphone className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
@@ -332,7 +332,7 @@ export default function Home() {
 						</ScrollReveal>
 
 						<ScrollReveal direction="up" delay={400}>
-							<Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-pink-500/30">
+							<Card className="group overflow-hidden neumorphic-card border-0">
 							<div className="aspect-video bg-gradient-to-br from-pink-500 to-pink-700 relative overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
 									<Rocket className="w-20 h-20 text-white/20 group-hover:text-white/30 transition-colors group-hover:rotate-12 duration-700" />
@@ -385,7 +385,7 @@ export default function Home() {
 
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 						<ScrollReveal direction="left" delay={200}>
-							<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-blue-500/30 relative overflow-hidden group">
+							<Card className="neumorphic-card border-0 relative overflow-hidden group">
 							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 							<CardHeader className="relative">
 								<div className="flex items-center gap-4">
@@ -420,7 +420,7 @@ export default function Home() {
 						</ScrollReveal>
 
 						<ScrollReveal direction="up" delay={300}>
-							<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-purple-500/30 relative overflow-hidden group">
+							<Card className="neumorphic-card border-0 relative overflow-hidden group">
 								<div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 								<CardHeader className="relative">
 									<div className="flex items-center gap-4">
@@ -457,7 +457,7 @@ export default function Home() {
 						</ScrollReveal>
 
 						<ScrollReveal direction="right" delay={400}>
-							<Card className="border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-pink-500/30 relative overflow-hidden group">
+							<Card className="neumorphic-card border-0 relative overflow-hidden group">
 								<div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 								<CardHeader className="relative">
 									<div className="flex items-center gap-4">
