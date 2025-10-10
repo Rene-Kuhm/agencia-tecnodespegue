@@ -153,7 +153,7 @@ export function Footer() {
 					<div>
 						<h4 className="font-semibold mb-4">Contacto</h4>
 						<ul className="space-y-2 text-sm text-muted-foreground">
-							<li>info@tecnodespegue.com</li>
+							<li>renekuhm2@gmail.com</li>
 							<li>+54 (2334) 409838</li>
 							<li>Eduardo Castex (LP), Argentina</li>
 						</ul>

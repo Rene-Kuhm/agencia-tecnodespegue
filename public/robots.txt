@@ -1,0 +1,12 @@
+# robots.txt for TecnoDespegue
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://tecnodespegue.com/sitemap.xml
