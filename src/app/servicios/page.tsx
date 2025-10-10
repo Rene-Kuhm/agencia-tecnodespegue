@@ -1,30 +1,24 @@
-import { Button } from "@/components/ui/button"
 import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import {
+	ArrowRight,
+	CheckCircle2,
+	Cloud,
 	Code2,
+	Database,
+	Globe,
+	LineChart,
+	Megaphone,
 	Palette,
 	Rocket,
-	Globe,
-	Smartphone,
-	Database,
-	Cloud,
-	ShoppingCart,
 	Search,
-	Megaphone,
-	LineChart,
 	Shield,
-	CheckCircle2,
-	ArrowRight,
+	ShoppingCart,
+	Smartphone,
 	Zap,
 } from "lucide-react"
 import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata = {
 	title: "Servicios | Agencia TecnoDespegue",
@@ -55,9 +49,8 @@ export default function ServiciosPage() {
 						</h1>
 
 						<p className="text-muted-foreground text-lg md:text-xl max-w-[700px]">
-							Ofrecemos un ecosistema completo de servicios digitales diseñados
-							para impulsar tu negocio al siguiente nivel con tecnología de
-							vanguardia.
+							Ofrecemos un ecosistema completo de servicios digitales diseñados para impulsar tu
+							negocio al siguiente nivel con tecnología de vanguardia.
 						</p>
 
 						<Button
@@ -88,9 +81,9 @@ export default function ServiciosPage() {
 									Desarrollo Web
 								</h2>
 								<p className="text-muted-foreground text-lg mb-6">
-									Creamos aplicaciones web modernas, rápidas y escalables
-									utilizando las últimas tecnologías del mercado. Desde landing
-									pages hasta plataformas empresariales complejas.
+									Creamos aplicaciones web modernas, rápidas y escalables utilizando las últimas
+									tecnologías del mercado. Desde landing pages hasta plataformas empresariales
+									complejas.
 								</p>
 								<ul className="space-y-3 mb-6">
 									{[
@@ -126,9 +119,7 @@ export default function ServiciosPage() {
 													className="flex flex-col items-center justify-center p-6 rounded-lg bg-muted hover:bg-muted/70 transition-colors"
 												>
 													<tech.icon className="w-8 h-8 mb-2 text-blue-600" />
-													<span className="text-sm font-medium">
-														{tech.label}
-													</span>
+													<span className="text-sm font-medium">{tech.label}</span>
 												</div>
 											))}
 										</div>
@@ -156,9 +147,7 @@ export default function ServiciosPage() {
 													<span className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">
 														{stat.value}
 													</span>
-													<span className="text-sm text-muted-foreground">
-														{stat.label}
-													</span>
+													<span className="text-sm text-muted-foreground">{stat.label}</span>
 												</div>
 											))}
 										</div>
@@ -173,9 +162,8 @@ export default function ServiciosPage() {
 									Diseño UX/UI
 								</h2>
 								<p className="text-muted-foreground text-lg mb-6">
-									Diseñamos experiencias de usuario excepcionales que no solo
-									se ven bien, sino que convierten visitantes en clientes.
-									Cada píxel cuenta.
+									Diseñamos experiencias de usuario excepcionales que no solo se ven bien, sino que
+									convierten visitantes en clientes. Cada píxel cuenta.
 								</p>
 								<ul className="space-y-3 mb-6">
 									{[
@@ -208,9 +196,8 @@ export default function ServiciosPage() {
 									Consultoría Digital
 								</h2>
 								<p className="text-muted-foreground text-lg mb-6">
-									Te ayudamos a definir y ejecutar estrategias digitales que
-									generen resultados medibles. Desde la planificación hasta la
-									optimización continua.
+									Te ayudamos a definir y ejecutar estrategias digitales que generen resultados
+									medibles. Desde la planificación hasta la optimización continua.
 								</p>
 								<ul className="space-y-3 mb-6">
 									{[
@@ -246,9 +233,7 @@ export default function ServiciosPage() {
 													className="flex flex-col items-center justify-center p-6 rounded-lg bg-muted hover:bg-muted/70 transition-colors"
 												>
 													<service.icon className="w-8 h-8 mb-2 text-pink-600" />
-													<span className="text-sm font-medium">
-														{service.label}
-													</span>
+													<span className="text-sm font-medium">{service.label}</span>
 												</div>
 											))}
 										</div>
@@ -292,8 +277,7 @@ export default function ServiciosPage() {
 							{
 								icon: Cloud,
 								title: "Cloud & DevOps",
-								description:
-									"Infraestructura escalable en la nube con CI/CD y monitoreo continuo.",
+								description: "Infraestructura escalable en la nube con CI/CD y monitoreo continuo.",
 							},
 							{
 								icon: Search,
@@ -323,9 +307,7 @@ export default function ServiciosPage() {
 										<service.icon className="h-6 w-6 text-white" />
 									</div>
 									<CardTitle>{service.title}</CardTitle>
-									<CardDescription className="text-base">
-										{service.description}
-									</CardDescription>
+									<CardDescription className="text-base">{service.description}</CardDescription>
 								</CardHeader>
 							</Card>
 						))}
@@ -344,8 +326,8 @@ export default function ServiciosPage() {
 							¿Listo para Comenzar tu Proyecto?
 						</h2>
 						<p className="text-white/90 text-lg md:text-xl">
-							Agenda una consulta gratuita y descubre cómo podemos ayudarte a
-							alcanzar tus objetivos digitales.
+							Agenda una consulta gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos
+							digitales.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4">
 							<Button

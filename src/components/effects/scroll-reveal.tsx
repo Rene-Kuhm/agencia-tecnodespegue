@@ -59,8 +59,7 @@ export function ScrollReveal({
 			style={{
 				opacity: isVisible ? 1 : 0,
 				transform: isVisible ? "translate(0)" : getInitialTransform(),
-				transition:
-					"opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+				transition: "opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
 			}}
 		>
 			{children}

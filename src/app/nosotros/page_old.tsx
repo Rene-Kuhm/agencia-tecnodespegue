@@ -3,8 +3,10 @@ import {
 	Award,
 	Clock,
 	Code2,
+	Github,
 	Globe,
 	Heart,
+	Linkedin,
 	Palette,
 	Rocket,
 	Shield,
@@ -12,20 +14,100 @@ import {
 	Star,
 	Target,
 	TrendingUp,
+	Twitter,
 	Users,
 	Zap,
 } from "lucide-react"
 import Link from "next/link"
-import { TeamSection } from "@/components/sections/team-section"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata = {
-	title: "Sobre Mí | René Kuhm - TecnoDespegue",
+	title: "Nosotros | Agencia TecnoDespegue",
 	description:
-		"Conoce a René Kuhm, FullStack Developer detrás de TecnoDespegue. Mi misión, valores y pasión por crear soluciones digitales excepcionales.",
+		"Conoce al equipo detrás de TecnoDespegue. Nuestra misión, valores y las personas que hacen posible tu éxito digital.",
 }
+
+const team = [
+	{
+		name: "Carlos Mendoza",
+		role: "CEO & Founder",
+		avatar: "CM",
+		description:
+			"Experto en estrategia digital con 10+ años de experiencia liderando proyectos tecnológicos.",
+		gradient: "from-blue-500 to-blue-600",
+		social: {
+			linkedin: "#",
+			twitter: "#",
+			github: "#",
+		},
+	},
+	{
+		name: "Laura Sánchez",
+		role: "CTO",
+		avatar: "LS",
+		description:
+			"Arquitecta de software especializada en soluciones escalables y alta performance.",
+		gradient: "from-purple-500 to-purple-600",
+		social: {
+			linkedin: "#",
+			twitter: "#",
+			github: "#",
+		},
+	},
+	{
+		name: "Diego Torres",
+		role: "Lead Developer",
+		avatar: "DT",
+		description: "Full-stack developer apasionado por crear experiencias web excepcionales.",
+		gradient: "from-pink-500 to-pink-600",
+		social: {
+			linkedin: "#",
+			twitter: "#",
+			github: "#",
+		},
+	},
+	{
+		name: "Ana Martínez",
+		role: "UX/UI Designer",
+		avatar: "AM",
+		description:
+			"Diseñadora con enfoque en experiencias centradas en el usuario y diseño visual impactante.",
+		gradient: "from-orange-500 to-orange-600",
+		social: {
+			linkedin: "#",
+			twitter: "#",
+			github: "#",
+		},
+	},
+	{
+		name: "Roberto Gómez",
+		role: "Frontend Developer",
+		avatar: "RG",
+		description: "Especialista en React y Next.js, creando interfaces rápidas y accesibles.",
+		gradient: "from-green-500 to-green-600",
+		social: {
+			linkedin: "#",
+			twitter: "#",
+			github: "#",
+		},
+	},
+	{
+		name: "María López",
+		role: "Project Manager",
+		avatar: "ML",
+		description:
+			"Gestiona proyectos con metodologías ágiles asegurando entregas puntuales y calidad.",
+		gradient: "from-red-500 to-red-600",
+		social: {
+			linkedin: "#",
+			twitter: "#",
+			github: "#",
+		},
+	},
+]
 
 export default function NosotrosPage() {
 	return (
@@ -39,19 +121,19 @@ export default function NosotrosPage() {
 					<div className="flex flex-col items-center space-y-6 text-center max-w-4xl mx-auto">
 						<Badge className="px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
 							<Sparkles className="w-4 h-4 mr-2" />
-							Sobre Mí
+							Sobre Nosotros
 						</Badge>
 
 						<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-							Impulso tu
+							Impulsamos tu
 							<span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
 								Transformación Digital
 							</span>
 						</h1>
 
 						<p className="text-muted-foreground text-lg md:text-xl max-w-[700px]">
-							Soy René Kuhm, un desarrollador FullStack apasionado por la tecnología dedicado a
-							crear soluciones digitales que transforman negocios y mejoran vidas.
+							Somos un equipo apasionado de expertos en tecnología dedicados a crear soluciones
+							digitales que transforman negocios y mejoran vidas.
 						</p>
 					</div>
 				</div>
@@ -66,13 +148,13 @@ export default function NosotrosPage() {
 								<div className="p-4 w-fit rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 mb-4 group-hover:scale-110 transition-transform">
 									<Target className="h-10 w-10 text-white" />
 								</div>
-								<CardTitle className="text-3xl">Mi Misión</CardTitle>
+								<CardTitle className="text-3xl">Nuestra Misión</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<p className="text-muted-foreground text-lg leading-relaxed">
 									Transformar ideas innovadoras en soluciones digitales excepcionales que impulsen
-									el crecimiento de mis clientes. Me comprometo a entregar productos de alta calidad
-									que superen expectativas y generen valor real.
+									el crecimiento de nuestros clientes. Nos comprometemos a entregar productos de
+									alta calidad que superen expectativas y generen valor real.
 								</p>
 							</CardContent>
 						</Card>
@@ -82,13 +164,13 @@ export default function NosotrosPage() {
 								<div className="p-4 w-fit rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 mb-4 group-hover:scale-110 transition-transform">
 									<Rocket className="h-10 w-10 text-white" />
 								</div>
-								<CardTitle className="text-3xl">Mi Visión</CardTitle>
+								<CardTitle className="text-3xl">Nuestra Visión</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<p className="text-muted-foreground text-lg leading-relaxed">
-									Ser reconocido por mi excelencia técnica, innovación constante y compromiso con el
-									éxito de mis clientes. Quiero ser el socio estratégico preferido para la
-									transformación digital.
+									Ser la agencia digital líder reconocida por nuestra excelencia técnica, innovación
+									constante y compromiso con el éxito de nuestros clientes. Queremos ser el socio
+									estratégico preferido para la transformación digital.
 								</p>
 							</CardContent>
 						</Card>
@@ -101,13 +183,13 @@ export default function NosotrosPage() {
 				<div className="container px-4 md:px-6">
 					<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
 						<Badge variant="outline" className="px-4 py-1.5">
-							Mis Valores
+							Nuestros Valores
 						</Badge>
 						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-							Lo Que Me Define
+							Lo Que Nos Define
 						</h2>
 						<p className="max-w-[900px] text-muted-foreground md:text-xl">
-							Valores que guían cada decisión y proyecto que realizo
+							Valores que guían cada decisión y proyecto que realizamos
 						</p>
 					</div>
 
@@ -180,7 +262,7 @@ export default function NosotrosPage() {
 				<div className="container px-4 md:px-6">
 					<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
 						<Badge variant="outline" className="px-4 py-1.5">
-							Mi Trayectoria
+							Nuestros Números
 						</Badge>
 						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 							Resultados Que Hablan Por Sí Solos
@@ -231,8 +313,81 @@ export default function NosotrosPage() {
 				</div>
 			</section>
 
-			{/* Team Section - René Kuhm */}
-			<TeamSection />
+			{/* Team */}
+			<section className="w-full py-16 md:py-24 lg:py-32 bg-muted/50">
+				<div className="container px-4 md:px-6">
+					<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+						<Badge variant="outline" className="px-4 py-1.5">
+							Nuestro Equipo
+						</Badge>
+						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+							Conoce a Los Expertos
+						</h2>
+						<p className="max-w-[900px] text-muted-foreground md:text-xl">
+							Un equipo multidisciplinario de profesionales apasionados por la tecnología
+						</p>
+					</div>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+						{team.map((member) => (
+							<Card
+								key={member.name}
+								className="group hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50"
+							>
+								<CardHeader className="text-center">
+									<div className="flex justify-center mb-4">
+										<Avatar className="w-24 h-24 ring-4 ring-muted group-hover:ring-primary/50 transition-all">
+											<AvatarImage src={`/team/${member.avatar}.jpg`} />
+											<AvatarFallback
+												className={`bg-gradient-to-br ${member.gradient} text-white text-2xl font-bold`}
+											>
+												{member.avatar}
+											</AvatarFallback>
+										</Avatar>
+									</div>
+									<CardTitle className="text-2xl">{member.name}</CardTitle>
+									<div className="text-sm font-medium text-primary">{member.role}</div>
+								</CardHeader>
+								<CardContent>
+									<p className="text-muted-foreground text-center mb-4">{member.description}</p>
+									<div className="flex justify-center gap-3">
+										<Button
+											variant="ghost"
+											size="icon"
+											className="hover:bg-blue-500/10 hover:text-blue-600"
+											asChild
+										>
+											<Link href={member.social.linkedin}>
+												<Linkedin className="w-4 h-4" />
+											</Link>
+										</Button>
+										<Button
+											variant="ghost"
+											size="icon"
+											className="hover:bg-gray-800/10 hover:text-gray-800 dark:hover:text-white"
+											asChild
+										>
+											<Link href={member.social.github}>
+												<Github className="w-4 h-4" />
+											</Link>
+										</Button>
+										<Button
+											variant="ghost"
+											size="icon"
+											className="hover:bg-blue-400/10 hover:text-blue-400"
+											asChild
+										>
+											<Link href={member.social.twitter}>
+												<Twitter className="w-4 h-4" />
+											</Link>
+										</Button>
+									</div>
+								</CardContent>
+							</Card>
+						))}
+					</div>
+				</div>
+			</section>
 
 			{/* Why Choose Us */}
 			<section className="w-full py-16 md:py-24">
@@ -292,7 +447,7 @@ export default function NosotrosPage() {
 				<div className="container px-4 md:px-6 relative">
 					<div className="flex flex-col items-center justify-center space-y-6 text-center text-white max-w-3xl mx-auto">
 						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-							¿Listo para Trabajar Juntos?
+							¿Listo para Trabajar con Nosotros?
 						</h2>
 						<p className="text-white/90 text-lg md:text-xl">
 							Únete a más de 80 empresas que han transformado su presencia digital con

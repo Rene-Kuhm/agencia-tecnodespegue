@@ -1,12 +1,12 @@
 "use client"
 
+import { Facebook, Github, Instagram, Linkedin, Mail, Rocket, Twitter } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
+import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
-import { Rocket, Facebook, Twitter, Instagram, Linkedin, Github, Mail } from "lucide-react"
-import { useState } from "react"
-import { toast } from "sonner"
 
 export function Footer() {
 	const [email, setEmail] = useState("")
@@ -28,8 +28,7 @@ export function Footer() {
 				<div className="mb-12 max-w-2xl mx-auto text-center">
 					<h3 className="text-2xl font-bold mb-2">Mantente Actualizado</h3>
 					<p className="text-muted-foreground mb-6">
-						Suscribete a nuestro newsletter para recibir las ultimas noticias y
-						ofertas especiales
+						Suscribete a nuestro newsletter para recibir las ultimas noticias y ofertas especiales
 					</p>
 					<form
 						onSubmit={handleNewsletterSubmit}
@@ -43,7 +42,10 @@ export function Footer() {
 							required
 							className="flex-1"
 						/>
-						<Button type="submit" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+						<Button
+							type="submit"
+							className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+						>
 							<Mail className="w-4 h-4 mr-2" />
 							Suscribirse
 						</Button>
@@ -65,8 +67,7 @@ export function Footer() {
 							</span>
 						</Link>
 						<p className="text-sm text-muted-foreground">
-							Impulsamos tu negocio hacia el futuro con soluciones tecnologicas
-							innovadoras.
+							Impulsamos tu negocio hacia el futuro con soluciones tecnologicas innovadoras.
 						</p>
 					</div>
 
@@ -153,8 +154,8 @@ export function Footer() {
 						<h4 className="font-semibold mb-4">Contacto</h4>
 						<ul className="space-y-2 text-sm text-muted-foreground">
 							<li>info@tecnodespegue.com</li>
-							<li>+1 (555) 123-4567</li>
-							<li>San Francisco, CA</li>
+							<li>+54 (2334) 409838</li>
+							<li>Eduardo Castex (LP), Argentina</li>
 						</ul>
 					</div>
 				</div>

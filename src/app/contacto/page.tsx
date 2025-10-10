@@ -1,27 +1,21 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
-import {
-	Mail,
-	Phone,
-	MapPin,
-	Clock,
-	Send,
-	MessageSquare,
-	Sparkles,
 	CheckCircle2,
+	Clock,
+	Mail,
+	MapPin,
+	MessageSquare,
+	Phone,
+	Send,
+	Sparkles,
 } from "lucide-react"
 import { useState } from "react"
 import { toast } from "sonner"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 
 export default function ContactoPage() {
 	const [isLoading, setIsLoading] = useState(false)
@@ -36,9 +30,7 @@ export default function ContactoPage() {
 	})
 
 	const handleChange = (
-		e: React.ChangeEvent<
-			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-		>,
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
 	) => {
 		const { name, value } = e.target
 		setFormData((prev) => ({ ...prev, [name]: value }))
@@ -52,8 +44,7 @@ export default function ContactoPage() {
 		await new Promise((resolve) => setTimeout(resolve, 1500))
 
 		toast.success("¡Mensaje enviado!", {
-			description:
-				"Hemos recibido tu consulta. Te contactaremos pronto por email.",
+			description: "Hemos recibido tu consulta. Te contactaremos pronto por email.",
 		})
 
 		setIsLoading(false)
@@ -90,8 +81,8 @@ export default function ContactoPage() {
 						</h1>
 
 						<p className="text-muted-foreground text-lg md:text-xl max-w-[700px]">
-							Estamos listos para escucharte. Cuéntanos sobre tu proyecto y
-							descubre cómo podemos ayudarte a alcanzar tus objetivos digitales.
+							Estamos listos para escucharte. Cuéntanos sobre tu proyecto y descubre cómo podemos
+							ayudarte a alcanzar tus objetivos digitales.
 						</p>
 					</div>
 				</div>
@@ -162,8 +153,7 @@ export default function ContactoPage() {
 									Solicita una Consulta Gratuita
 								</h2>
 								<p className="text-muted-foreground text-lg">
-									Completa el formulario y nos pondremos en contacto contigo en
-									menos de 24 horas.
+									Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.
 								</p>
 							</div>
 
@@ -190,10 +180,7 @@ export default function ContactoPage() {
 
 								{/* Email */}
 								<div className="space-y-2">
-									<label
-										htmlFor="email"
-										className="text-sm font-medium leading-none"
-									>
+									<label htmlFor="email" className="text-sm font-medium leading-none">
 										Email *
 									</label>
 									<Input
@@ -321,8 +308,8 @@ export default function ContactoPage() {
 								</Button>
 
 								<p className="text-xs text-muted-foreground text-center">
-									Al enviar este formulario, aceptas nuestra política de
-									privacidad y términos de servicio.
+									Al enviar este formulario, aceptas nuestra política de privacidad y términos de
+									servicio.
 								</p>
 							</form>
 						</div>
@@ -334,9 +321,7 @@ export default function ContactoPage() {
 									<div className="p-3 w-fit rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 mb-4">
 										<MessageSquare className="h-8 w-8 text-white" />
 									</div>
-									<CardTitle className="text-2xl">
-										¿Por Qué Contactarnos?
-									</CardTitle>
+									<CardTitle className="text-2xl">¿Por Qué Contactarnos?</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<ul className="space-y-3">
@@ -367,9 +352,8 @@ export default function ContactoPage() {
 								</CardHeader>
 								<CardContent>
 									<p className="text-white/90 mb-4">
-										Si prefieres una conversación más directa, podemos agendar
-										una videollamada de 30 minutos para conocer tu proyecto en
-										detalle.
+										Si prefieres una conversación más directa, podemos agendar una videollamada de
+										30 minutos para conocer tu proyecto en detalle.
 									</p>
 									<Button
 										size="lg"
@@ -415,9 +399,7 @@ export default function ContactoPage() {
 												</div>
 												<div>
 													<p className="font-semibold">{phase.title}</p>
-													<p className="text-sm text-muted-foreground">
-														{phase.desc}
-													</p>
+													<p className="text-sm text-muted-foreground">{phase.desc}</p>
 												</div>
 											</div>
 										))}

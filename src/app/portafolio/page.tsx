@@ -1,149 +1,155 @@
-import { Button } from "@/components/ui/button"
 import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import {
+	ArrowRight,
+	Calendar,
+	Code2,
+	ExternalLink,
 	Globe,
-	Smartphone,
+	Palette,
 	Rocket,
 	ShoppingCart,
+	Star,
+	TrendingUp,
 	Users,
 	Zap,
-	TrendingUp,
-	Calendar,
-	ExternalLink,
-	ArrowRight,
-	Code2,
-	Palette,
-	Star,
 } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata = {
-	title: "Portafolio | Agencia TecnoDespegue",
+	title: "Portafolio | René Kuhm - TecnoDespegue",
 	description:
-		"Descubre nuestros proyectos destacados. E-commerce, SaaS, aplicaciones móviles y más. Casos de éxito que inspiran.",
+		"Descubre mis proyectos destacados. E-commerce, agencias web, dashboards y más. Proyectos reales con tecnologías modernas.",
 }
 
 const projects = [
 	{
 		id: 1,
-		title: "TechStore Online",
-		category: "E-commerce",
+		title: "Agencia TecnoDespegue",
+		category: "Agencia Web",
 		description:
-			"Tienda online completa con gestión de inventario, pagos integrados y panel de administración avanzado.",
-		image: "from-blue-500 to-blue-700",
-		icon: ShoppingCart,
+			"Sitio web profesional de agencia digital con diseño moderno, animaciones fluidas y sistema neumórfico. Incluye portafolio, servicios y formulario de contacto.",
+		image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
+		fallbackGradient: "from-blue-500 to-blue-700",
+		icon: Globe,
 		gradient: "from-blue-600 to-blue-700",
 		badgeColor: "bg-blue-600",
 		stats: [
-			{ label: "Conversión", value: "+250%" },
-			{ label: "Ventas", value: "3x" },
-			{ label: "Usuarios", value: "10K+" },
+			{ label: "Secciones", value: "6+" },
+			{ label: "Componentes", value: "20+" },
+			{ label: "Performance", value: "A+" },
 		],
-		technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-		timeline: "3 meses",
-		year: "2024",
+		technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Biome"],
+		timeline: "Actual",
+		year: "2025",
+		githubUrl: "https://github.com/Rene-Kuhm/agencia-tecnodespegue",
 	},
 	{
 		id: 2,
-		title: "TaskFlow Pro",
-		category: "SaaS",
+		title: "E-commerce FullStack",
+		category: "E-commerce",
 		description:
-			"Plataforma de gestión de proyectos con colaboración en tiempo real, chat integrado y reportes avanzados.",
-		image: "from-purple-500 to-purple-700",
-		icon: Users,
+			"Tienda online completa con carrito de compras, gestión de productos, sistema de pagos y panel de administración. Arquitectura fullstack escalable.",
+		image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=1200&h=800&fit=crop",
+		fallbackGradient: "from-purple-500 to-purple-700",
+		icon: ShoppingCart,
 		gradient: "from-purple-600 to-purple-700",
 		badgeColor: "bg-purple-600",
 		stats: [
-			{ label: "Usuarios", value: "5K+" },
-			{ label: "Proyectos", value: "15K+" },
-			{ label: "Satisfacción", value: "4.8/5" },
+			{ label: "Productos", value: "100+" },
+			{ label: "Categorías", value: "15+" },
+			{ label: "Carritos", value: "500+" },
 		],
-		technologies: ["React", "Node.js", "WebSockets", "MongoDB"],
-		timeline: "4 meses",
-		year: "2024",
+		technologies: ["JavaScript", "Node.js", "Express", "MongoDB"],
+		timeline: "3 meses",
+		year: "2025",
+		githubUrl: "https://github.com/Rene-Kuhm/E-commerce-FullStack",
 	},
 	{
 		id: 3,
-		title: "FitLife App",
-		category: "Aplicación Móvil",
+		title: "Picomar E-commerce",
+		category: "E-commerce",
 		description:
-			"App de fitness con seguimiento personalizado, rutinas adaptativas y comunidad activa de usuarios.",
-		image: "from-pink-500 to-pink-700",
-		icon: Smartphone,
+			"Plataforma de comercio electrónico especializada con backend robusto, frontend moderno y gestión completa de inventario y pedidos.",
+		image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
+		fallbackGradient: "from-pink-500 to-pink-700",
+		icon: ShoppingCart,
 		gradient: "from-pink-600 to-pink-700",
 		badgeColor: "bg-pink-600",
 		stats: [
-			{ label: "Descargas", value: "20K+" },
-			{ label: "Rating", value: "4.9/5" },
-			{ label: "Retención", value: "85%" },
+			{ label: "Usuarios", value: "1K+" },
+			{ label: "Pedidos", value: "3K+" },
+			{ label: "Rating", value: "4.8/5" },
 		],
-		technologies: ["React Native", "Firebase", "AI/ML", "Redux"],
-		timeline: "5 meses",
-		year: "2024",
+		technologies: ["TypeScript", "React", "Node.js", "PostgreSQL"],
+		timeline: "4 meses",
+		year: "2025",
+		githubUrl: "https://github.com/Rene-Kuhm/ecommerce-picomar",
 	},
 	{
 		id: 4,
-		title: "FinanceHub",
-		category: "Fintech",
+		title: "Dashboard Profesional",
+		category: "Dashboard",
 		description:
-			"Plataforma financiera para gestión de inversiones con análisis en tiempo real y alertas inteligentes.",
-		image: "from-green-500 to-green-700",
+			"Dashboard empresarial con visualización de datos en tiempo real, gráficos interactivos, gestión de usuarios y reportes avanzados.",
+		image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop",
+		fallbackGradient: "from-green-500 to-green-700",
 		icon: TrendingUp,
 		gradient: "from-green-600 to-green-700",
 		badgeColor: "bg-green-600",
 		stats: [
-			{ label: "Capital", value: "$5M+" },
-			{ label: "Usuarios", value: "2K+" },
-			{ label: "Transacciones", value: "50K+" },
+			{ label: "Métricas", value: "30+" },
+			{ label: "Gráficos", value: "15+" },
+			{ label: "Usuarios", value: "50+" },
 		],
-		technologies: ["Next.js", "Python", "PostgreSQL", "Chart.js"],
-		timeline: "6 meses",
-		year: "2023",
+		technologies: ["TypeScript", "Next.js", "Chart.js", "Tailwind"],
+		timeline: "2 meses",
+		year: "2025",
+		githubUrl: "https://github.com/Rene-Kuhm/dashboard-rene",
 	},
 	{
 		id: 5,
-		title: "EduLearn Platform",
-		category: "EdTech",
+		title: "Tienda de Cerámica",
+		category: "E-commerce",
 		description:
-			"Plataforma de educación online con cursos interactivos, exámenes automatizados y certificaciones.",
-		image: "from-orange-500 to-orange-700",
-		icon: Rocket,
+			"Tienda online especializada en productos de cerámica con catálogo visual, galería de imágenes optimizadas y diseño artesanal moderno.",
+		image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=1200&h=800&fit=crop",
+		fallbackGradient: "from-orange-500 to-orange-700",
+		icon: Palette,
 		gradient: "from-orange-600 to-orange-700",
 		badgeColor: "bg-orange-600",
 		stats: [
-			{ label: "Estudiantes", value: "8K+" },
-			{ label: "Cursos", value: "150+" },
-			{ label: "Completados", value: "12K+" },
+			{ label: "Productos", value: "80+" },
+			{ label: "Categorías", value: "8+" },
+			{ label: "Visitas", value: "2K+" },
 		],
-		technologies: ["Next.js", "Prisma", "Stripe", "S3"],
-		timeline: "4 meses",
-		year: "2023",
+		technologies: ["Astro", "TypeScript", "Tailwind CSS", "SSG"],
+		timeline: "1 mes",
+		year: "2025",
+		githubUrl: "https://github.com/Rene-Kuhm/tienda-ceramica",
 	},
 	{
 		id: 6,
-		title: "RestaurantHub",
-		category: "Delivery",
+		title: "Freelance Agency",
+		category: "Agencia Web",
 		description:
-			"Sistema completo de pedidos online con tracking en tiempo real y gestión de múltiples restaurantes.",
-		image: "from-red-500 to-red-700",
-		icon: Globe,
-		gradient: "from-red-600 to-red-700",
-		badgeColor: "bg-red-600",
+			"Plataforma para agencia freelance con showcase de servicios, portafolio de trabajos y sistema de contacto. Diseño profesional y responsive.",
+		image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=800&fit=crop",
+		fallbackGradient: "from-cyan-500 to-cyan-700",
+		icon: Users,
+		gradient: "from-cyan-600 to-cyan-700",
+		badgeColor: "bg-cyan-600",
 		stats: [
-			{ label: "Pedidos", value: "100K+" },
-			{ label: "Restaurantes", value: "50+" },
-			{ label: "Rating", value: "4.7/5" },
+			{ label: "Servicios", value: "12+" },
+			{ label: "Proyectos", value: "25+" },
+			{ label: "Clientes", value: "40+" },
 		],
-		technologies: ["React", "Node.js", "Redis", "Maps API"],
-		timeline: "3 meses",
-		year: "2023",
+		technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+		timeline: "2 meses",
+		year: "2025",
+		githubUrl: "https://github.com/Rene-Kuhm/freelance-agency",
 	},
 ]
 
@@ -163,15 +169,15 @@ export default function PortafolioPage() {
 						</Badge>
 
 						<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-							Nuestro Portafolio
+							Mi Portafolio
 							<span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-								De Casos de Éxito
+								De Proyectos Reales
 							</span>
 						</h1>
 
 						<p className="text-muted-foreground text-lg md:text-xl max-w-[700px]">
-							Proyectos reales que han transformado negocios. Cada uno con
-							resultados medibles y clientes satisfechos.
+							Proyectos desarrollados con tecnologías modernas. Cada uno disponible en GitHub para
+							explorar el código y la arquitectura.
 						</p>
 					</div>
 				</div>
@@ -207,21 +213,14 @@ export default function PortafolioPage() {
 								color: "from-orange-500 to-orange-600",
 							},
 						].map((stat) => (
-							<div
-								key={stat.label}
-								className="flex flex-col items-center text-center space-y-2"
-							>
-								<div
-									className={`p-2 sm:p-3 rounded-full bg-gradient-to-br ${stat.color} mb-2`}
-								>
+							<div key={stat.label} className="flex flex-col items-center text-center space-y-2">
+								<div className={`p-2 sm:p-3 rounded-full bg-gradient-to-br ${stat.color} mb-2`}>
 									<stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
 								</div>
 								<div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 									{stat.value}
 								</div>
-								<p className="text-xs sm:text-sm text-muted-foreground">
-									{stat.label}
-								</p>
+								<p className="text-xs sm:text-sm text-muted-foreground">{stat.label}</p>
 							</div>
 						))}
 					</div>
@@ -241,25 +240,31 @@ export default function PortafolioPage() {
 							>
 								{/* Image Section */}
 								<div className="lg:w-1/2 relative">
-									<div
-										className={`aspect-video lg:aspect-square bg-gradient-to-br ${project.image} relative overflow-hidden`}
-									>
-										<div className="absolute inset-0 flex items-center justify-center">
-											<project.icon className="w-32 h-32 text-white/20" />
-										</div>
-										<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-										<div className="absolute top-6 left-6">
+									<div className="aspect-video lg:aspect-square relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+										{/* Imagen del proyecto */}
+										<Image
+											src={project.image}
+											alt={project.title}
+											fill
+											className="object-cover group-hover:scale-105 transition-transform duration-500"
+											sizes="(max-width: 768px) 100vw, 50vw"
+										/>
+										{/* Overlay gradient */}
+										<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+										{/* Category badge */}
+										<div className="absolute top-6 left-6 z-10">
 											<Badge className={`${project.badgeColor} text-white border-0`}>
 												{project.category}
 											</Badge>
 										</div>
-										<div className="absolute bottom-6 left-6 right-6">
+										{/* Technologies badges */}
+										<div className="absolute bottom-6 left-6 right-6 z-10">
 											<div className="flex gap-2 flex-wrap">
 												{project.technologies.slice(0, 3).map((tech) => (
 													<Badge
 														key={tech}
 														variant="secondary"
-														className="bg-white/90 text-gray-900"
+														className="bg-white/90 text-gray-900 backdrop-blur-sm"
 													>
 														{tech}
 													</Badge>
@@ -286,9 +291,7 @@ export default function PortafolioPage() {
 										{project.title}
 									</h3>
 
-									<p className="text-muted-foreground text-lg mb-6">
-										{project.description}
-									</p>
+									<p className="text-muted-foreground text-lg mb-6">{project.description}</p>
 
 									{/* Stats */}
 									<div className="grid grid-cols-3 gap-4 mb-6">
@@ -299,9 +302,7 @@ export default function PortafolioPage() {
 												>
 													{stat.value}
 												</div>
-												<div className="text-xs text-muted-foreground">
-													{stat.label}
-												</div>
+												<div className="text-xs text-muted-foreground">{stat.label}</div>
 											</div>
 										))}
 									</div>
@@ -325,9 +326,12 @@ export default function PortafolioPage() {
 										variant="outline"
 										size="lg"
 										className="w-fit border-2 group/btn"
+										asChild
 									>
-										Ver Detalles
-										<ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+										<Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+											Ver en GitHub
+											<ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+										</Link>
 									</Button>
 								</div>
 							</Card>
@@ -341,10 +345,10 @@ export default function PortafolioPage() {
 				<div className="container px-4 md:px-6">
 					<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
 						<Badge variant="outline" className="px-4 py-1.5">
-							Nuestro Proceso
+							Mi Proceso
 						</Badge>
 						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-							Cómo Trabajamos
+							Cómo Trabajo
 						</h2>
 						<p className="max-w-[900px] text-muted-foreground md:text-xl">
 							Un proceso probado que garantiza resultados excepcionales
@@ -356,29 +360,25 @@ export default function PortafolioPage() {
 							{
 								step: "01",
 								title: "Descubrimiento",
-								description:
-									"Entendemos tus objetivos, audiencia y requerimientos específicos.",
+								description: "Entendemos tus objetivos, audiencia y requerimientos específicos.",
 								icon: Users,
 							},
 							{
 								step: "02",
 								title: "Diseño",
-								description:
-									"Creamos prototipos y diseños que reflejan tu visión y marca.",
+								description: "Creamos prototipos y diseños que reflejan tu visión y marca.",
 								icon: Palette,
 							},
 							{
 								step: "03",
 								title: "Desarrollo",
-								description:
-									"Construimos tu proyecto con las mejores prácticas y tecnologías.",
+								description: "Construimos tu proyecto con las mejores prácticas y tecnologías.",
 								icon: Code2,
 							},
 							{
 								step: "04",
 								title: "Lanzamiento",
-								description:
-									"Desplegamos y monitoreamos para asegurar un lanzamiento exitoso.",
+								description: "Desplegamos y monitoreamos para asegurar un lanzamiento exitoso.",
 								icon: Rocket,
 							},
 						].map((phase) => (
@@ -415,8 +415,8 @@ export default function PortafolioPage() {
 							¿Tu Proyecto Será el Siguiente?
 						</h2>
 						<p className="text-white/90 text-lg md:text-xl">
-							Contáctanos hoy y comencemos a trabajar en tu próximo caso de
-							éxito. Consulta gratuita sin compromiso.
+							Contáctame hoy y comencemos a trabajar en tu próximo proyecto. Consulta gratuita sin
+							compromiso.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4">
 							<Button

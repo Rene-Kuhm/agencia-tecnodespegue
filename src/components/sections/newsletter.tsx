@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Sparkles } from "lucide-react"
+import { useState } from "react"
 import { toast } from "sonner"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 
 export function Newsletter() {
 	const [email, setEmail] = useState("")
@@ -46,8 +46,8 @@ export function Newsletter() {
 							Unete a Nuestra Comunidad
 						</CardTitle>
 						<CardDescription className="text-base md:text-lg">
-							Recibe contenido exclusivo, tips de desarrollo y las ultimas
-							tendencias tecnologicas directamente en tu bandeja de entrada.
+							Recibe contenido exclusivo, tips de desarrollo y las ultimas tendencias tecnologicas
+							directamente en tu bandeja de entrada.
 						</CardDescription>
 					</CardHeader>
 					<CardContent>
@@ -75,8 +75,8 @@ export function Newsletter() {
 								</Button>
 							</div>
 							<p className="text-xs text-center text-muted-foreground">
-								Al suscribirte, aceptas recibir correos electronicos de
-								TecnoDespegue. Puedes darte de baja en cualquier momento.
+								Al suscribirte, aceptas recibir correos electronicos de TecnoDespegue. Puedes darte
+								de baja en cualquier momento.
 							</p>
 						</form>
 
@@ -84,21 +84,15 @@ export function Newsletter() {
 						<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
 							<div className="p-4 rounded-lg bg-muted/50">
 								<p className="font-semibold text-sm">Contenido Exclusivo</p>
-								<p className="text-xs text-muted-foreground mt-1">
-									Tips y recursos
-								</p>
+								<p className="text-xs text-muted-foreground mt-1">Tips y recursos</p>
 							</div>
 							<div className="p-4 rounded-lg bg-muted/50">
 								<p className="font-semibold text-sm">Ofertas Especiales</p>
-								<p className="text-xs text-muted-foreground mt-1">
-									Descuentos unicos
-								</p>
+								<p className="text-xs text-muted-foreground mt-1">Descuentos unicos</p>
 							</div>
 							<div className="p-4 rounded-lg bg-muted/50">
 								<p className="font-semibold text-sm">Sin Spam</p>
-								<p className="text-xs text-muted-foreground mt-1">
-									Solo lo mejor
-								</p>
+								<p className="text-xs text-muted-foreground mt-1">Solo lo mejor</p>
 							</div>
 						</div>
 					</CardContent>

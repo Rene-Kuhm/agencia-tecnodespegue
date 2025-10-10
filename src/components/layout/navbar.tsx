@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { Menu, Rocket, X } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Rocket } from "lucide-react"
 
 export function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,7 +44,10 @@ export function Navbar() {
 
 				{/* CTA Button - Desktop */}
 				<div className="hidden md:flex items-center space-x-4">
-					<Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+					<Button
+						asChild
+						className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+					>
 						<Link href="/contacto">Contratar</Link>
 					</Button>
 				</div>
@@ -75,7 +78,10 @@ export function Navbar() {
 							</Link>
 						))}
 						<div className="pt-2">
-							<Button asChild className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+							<Button
+								asChild
+								className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+							>
 								<Link href="/contacto">Contratar</Link>
 							</Button>
 						</div>
