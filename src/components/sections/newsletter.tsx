@@ -15,18 +15,47 @@ export function Newsletter() {
 		e.preventDefault()
 		if (!email) return
 
+		// Validación básica de email
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+		if (!emailRegex.test(email)) {
+			toast.error("Email inválido", {
+				description: "Por favor ingresa un email válido",
+			})
+			return
+		}
+
 		setIsLoading(true)
 
-		// Simulate API call
-		await new Promise((resolve) => setTimeout(resolve, 1000))
+		try {
+			const response = await fetch("/api/newsletter", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ email }),
+			})
 
-		toast.success("Te has suscrito exitosamente!", {
-			description: `Se ha enviado un email de confirmacion a ${email}`,
-			duration: 5000,
-		})
+			const data = await response.json()
 
-		setEmail("")
-		setIsLoading(false)
+			if (!response.ok) {
+				throw new Error(data.error || "Error al suscribirse")
+			}
+
+			toast.success("¡Te has suscrito exitosamente!", {
+				description: "Revisa tu email para confirmar la suscripción",
+				duration: 5000,
+			})
+
+			setEmail("")
+		} catch (error) {
+			console.error("Error al suscribirse:", error)
+			toast.error("Error al suscribirse", {
+				description:
+					error instanceof Error ? error.message : "Intenta de nuevo más tarde",
+			})
+		} finally {
+			setIsLoading(false)
+		}
 	}
 
 	return (

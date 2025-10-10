@@ -52,22 +52,22 @@ export const SITE_CONFIG = {
  * @constant
  * @type {Object}
  * @property {string} facebook - URL de Facebook (desde env o fallback)
- * @property {string} twitter - URL de Twitter/X (desde env o fallback)
  * @property {string} linkedin - URL de LinkedIn (desde env o fallback)
  * @property {string} instagram - URL de Instagram (desde env o fallback)
+ * @property {string} youtube - URL de YouTube (desde env o fallback)
  * @property {string} github - URL de GitHub
  *
  * @example
  * import { SOCIAL_LINKS } from "@/constants"
  *
  * <a href={SOCIAL_LINKS.linkedin}>LinkedIn</a>
- * <a href={SOCIAL_LINKS.github}>GitHub</a>
+ * <a href={SOCIAL_LINKS.youtube}>YouTube</a>
  */
 export const SOCIAL_LINKS = {
 	facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://facebook.com/tecnodespegue",
-	twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://twitter.com/tecnodespegue",
 	linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://linkedin.com/company/tecnodespegue",
 	instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/tecnodespegue",
+	youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/@tecnodespegue",
 	github: "https://github.com/tecnodespegue",
 } as const
 

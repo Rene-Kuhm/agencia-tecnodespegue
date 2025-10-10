@@ -1,12 +1,13 @@
 "use client"
 
-import { Facebook, Github, Instagram, Linkedin, Mail, Rocket, Twitter } from "lucide-react"
+import { Facebook, Github, Instagram, Linkedin, Mail, Rocket, Youtube } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
+import { SOCIAL_LINKS } from "@/constants"
 
 export function Footer() {
 	const [email, setEmail] = useState("")
@@ -171,7 +172,7 @@ export function Footer() {
 					{/* Social Links */}
 					<div className="flex items-center space-x-4">
 						<Link
-							href="https://facebook.com"
+							href={SOCIAL_LINKS.facebook}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-muted-foreground hover:text-foreground transition-colors"
@@ -180,25 +181,7 @@ export function Footer() {
 							<Facebook className="w-5 h-5" />
 						</Link>
 						<Link
-							href="https://twitter.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-muted-foreground hover:text-foreground transition-colors"
-							aria-label="Twitter"
-						>
-							<Twitter className="w-5 h-5" />
-						</Link>
-						<Link
-							href="https://instagram.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-muted-foreground hover:text-foreground transition-colors"
-							aria-label="Instagram"
-						>
-							<Instagram className="w-5 h-5" />
-						</Link>
-						<Link
-							href="https://linkedin.com"
+							href={SOCIAL_LINKS.linkedin}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-muted-foreground hover:text-foreground transition-colors"
@@ -207,7 +190,25 @@ export function Footer() {
 							<Linkedin className="w-5 h-5" />
 						</Link>
 						<Link
-							href="https://github.com"
+							href={SOCIAL_LINKS.instagram}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-muted-foreground hover:text-foreground transition-colors"
+							aria-label="Instagram"
+						>
+							<Instagram className="w-5 h-5" />
+						</Link>
+						<Link
+							href={SOCIAL_LINKS.youtube}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-muted-foreground hover:text-foreground transition-colors"
+							aria-label="YouTube"
+						>
+							<Youtube className="w-5 h-5" />
+						</Link>
+						<Link
+							href={SOCIAL_LINKS.github}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-muted-foreground hover:text-foreground transition-colors"

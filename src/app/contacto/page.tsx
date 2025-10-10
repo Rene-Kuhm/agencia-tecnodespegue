@@ -40,23 +40,50 @@ export default function ContactoPage() {
 		e.preventDefault()
 		setIsLoading(true)
 
-		// Simulación de envío
-		await new Promise((resolve) => setTimeout(resolve, 1500))
+		try {
+			const response = await fetch("/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					name: formData.name,
+					email: formData.email,
+					phone: formData.phone || undefined,
+					subject: `${formData.service || "Consulta General"} - ${formData.company || "Sin empresa"}`,
+					message: `Servicio: ${formData.service}\nPresupuesto: ${formData.budget || "No especificado"}\nEmpresa: ${formData.company || "No especificada"}\n\n${formData.message}`,
+				}),
+			})
 
-		toast.success("¡Mensaje enviado!", {
-			description: "Hemos recibido tu consulta. Te contactaremos pronto por email.",
-		})
+			const data = await response.json()
 
-		setIsLoading(false)
-		setFormData({
-			name: "",
-			email: "",
-			phone: "",
-			company: "",
-			service: "",
-			budget: "",
-			message: "",
-		})
+			if (!response.ok) {
+				throw new Error(data.error || "Error al enviar el mensaje")
+			}
+
+			toast.success("¡Mensaje enviado!", {
+				description: "Hemos recibido tu consulta. Te contactaremos pronto por email.",
+				duration: 5000,
+			})
+
+			// Limpiar formulario
+			setFormData({
+				name: "",
+				email: "",
+				phone: "",
+				company: "",
+				service: "",
+				budget: "",
+				message: "",
+			})
+		} catch (error) {
+			console.error("Error al enviar formulario:", error)
+			toast.error("Error al enviar el mensaje", {
+				description: error instanceof Error ? error.message : "Intenta de nuevo más tarde",
+			})
+		} finally {
+			setIsLoading(false)
+		}
 	}
 
 	return (
