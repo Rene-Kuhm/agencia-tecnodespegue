@@ -55,7 +55,7 @@ export const SITE_CONFIG = {
  * @property {string} linkedin - URL de LinkedIn (desde env o fallback)
  * @property {string} instagram - URL de Instagram (desde env o fallback)
  * @property {string} youtube - URL de YouTube (desde env o fallback)
- * @property {string} github - URL de GitHub
+ * @property {string} github - URL de GitHub (desde env o fallback)
  *
  * @example
  * import { SOCIAL_LINKS } from "@/constants"
@@ -68,7 +68,7 @@ export const SOCIAL_LINKS = {
 	linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://linkedin.com/company/tecnodespegue",
 	instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/tecnodespegue",
 	youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/@tecnodespegue",
-	github: "https://github.com/tecnodespegue",
+	github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/Rene-Kuhm",
 } as const
 
 /**
