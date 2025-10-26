@@ -123,19 +123,19 @@ export default function ContactoPage() {
 							{
 								icon: Mail,
 								title: "Email",
-								value: "hola@tecnodespegue.com",
+								value: "contacto@tecnodespegue.com",
 								color: "from-blue-500 to-blue-600",
 							},
 							{
 								icon: Phone,
 								title: "Teléfono",
-								value: "+1 (555) 123-4567",
+								value: "+54 (2334) 409838",
 								color: "from-purple-500 to-purple-600",
 							},
 							{
 								icon: MapPin,
 								title: "Ubicación",
-								value: "Ciudad de México, MX",
+								value: "Eduardo Castex (LP), Argentina",
 								color: "from-pink-500 to-pink-600",
 							},
 							{

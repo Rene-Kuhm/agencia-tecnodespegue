@@ -9,7 +9,7 @@ Se ha actualizado la configuración de redes sociales del proyecto para reflejar
 ## Archivos Modificados
 
 ### 1. `.env.production`
-- ✅ Agregado email real: `renekuhm2@gmail.com`
+- ✅ Agregado email real: `contacto@tecnodespegue.com`
 - ✅ Agregado contraseña de aplicación de Gmail
 - ✅ Eliminado `NEXT_PUBLIC_TWITTER_URL`
 - ✅ Agregado `NEXT_PUBLIC_YOUTUBE_URL`
